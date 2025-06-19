@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dharmender Singh | Interior Design Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root { --primary: #f5e6ca; --secondary: #d4c1a4; --dark: #2d2d2d; --light: #ffffff; --accent: #c9a97c; --gray: #6a6a6a; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Raleway', sans-serif; color: var(--dark); background-color: transparent; background-image: none; line-height: 1.6; overflow-x: hidden; backdrop-filter: blur(3px); }
+    h1,h2,h3,h4 { font-family: 'Playfair Display', serif; font-weight: 600; text-shadow: 1px 1px 4px rgba(0,0,0,0.6); }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+    section { padding: 80px 0; }
+    .section-title { text-align: center; margin-bottom: 60px; font-size: 2.5rem; position: relative; }
+    .section-title::after { content: ''; display: block; width: 80px; height: 3px; background: var(--accent); position: absolute; bottom: -15px; left: 50%; transform: translateX(-50%); }
+    header { position: relative; width: 100%; height: 100vh; background: url('pic1.png') no-repeat center center/cover; display: flex; align-items: center; justify-content: center; text-align: center; color: #fff; }
+    header::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); }
+    .header-content { position: relative; z-index: 1; }
+    .header-content h1 { font-size: 3rem; }
+    .header-content p { text-shadow: 1px 1px 3px rgba(0,0,0,0.4); }
+    nav { margin-top: 20px; }
+    nav a { margin: 0 15px; color: #fff; font-weight: bold; text-decoration: none; font-size: 1rem; }
+    nav a:hover { color: var(--accent); }
+    .button-toggle { display: inline-block; padding: 8px 16px; margin: 10px 10px 0 0; background-color: var(--accent); color: white; border: none; cursor: pointer; font-family: 'Raleway', sans-serif; box-shadow: 1px 1px 4px rgba(0,0,0,0.4); }
+    .toggle-section { display: none; margin-top: 20px; }
+    #about p { font-family: 'Trebuchet MS', sans-serif; text-shadow: 1px 1px 3px rgba(0,0,0,0.4); margin-bottom: 20px; }
+    #about h3 { font-size: 1.5rem; margin-top: 30px; text-shadow: 1px 1px 4px rgba(0,0,0,0.6); }
+    #about ul { margin-top: 10px; margin-left: 20px; list-style: none; padding: 0; }
+    #about li { display: flex; align-items: center; gap: 15px; margin-bottom: 10px; }
+    #about li img { width: 50px; }
+    .project { background: var(--light); padding: 20px; margin-bottom: 20px; border: 1px solid #ddd; cursor: pointer; transition: all 0.3s ease; }
+    .project:hover { background: var(--primary); box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+    .project-details { display: none; margin-top: 10px; background: #f9f9f9; padding: 15px; border-top: 1px solid #ccc; }
+    .project.active .project-details { display: block; }
+    footer { text-align: center; padding: 40px 0; background: var(--primary); color: var(--dark); }
+	.section-bg {
+	  position: relative;
+      overflow: hidden;
+      z-index: 1;
+    }
+
+	.section-bg::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: url('pic7.png') no-repeat center center/cover;
+      filter: blur(4px);
+      opacity: 0.38;
+      z-index: -1;
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <img src="pic5.png" alt="Dharmender Singh Profile Picture"
+        style="width: 240px; height: 245px; border-radius: 50%; object-fit: cover; margin-bottom: 15px;">
+	  <h1>Dharmender Singh</h1>
+      <p>Interior Design Portfolio</p>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="section-bg">
+		<section id="about" class="container">
+		  <h2 class="section-title">About Me</h2>
+		  <p>I am a dedicated interior design student focused on creating spaces that are both functional and visually captivating. With a strong sense of creativity and organization, I approach every project thoughtfully, balancing aesthetics with practical planning. My design skills, combined with a natural ability to lead, enable me to envision and implement innovative solutions that enhance user experience. I am eager to contribute fresh ideas and meaningful design concepts as I continue to grow in this field.</p>
+
+		  <button class="button-toggle" onclick="toggleSection('qualifications')">Qualifications</button>
+		  <div id="qualifications" class="toggle-section">
+			<ul>
+			  <li><img src="KV_asc.jpg" alt="KV" /> Schooling: Kendriya Vidyalaya ASC CENTRE ( SOUTH ), Bangalore</li>
+			  <li><img src="BSD_logo.jpg" alt="BSD" /> Bachelor's in Interior Design – Ongoing ( Bangalore School of Design And Technology )</li>
+			</ul>
+		  </div>
+
+		  <button class="button-toggle" onclick="toggleSection('skills')">Skills</button>
+		  <div id="skills" class="toggle-section">
+			<ul>
+			  <li>Space Planning</li>
+			  <li>Color Theory & Material Selection</li>
+			  <li>3D Modeling</li>
+			  <li>Creative Visualization</li>
+			</ul>
+		  </div>
+
+		  <button class="button-toggle" onclick="toggleSection('tools')">Tools</button>
+		  <div id="tools" class="toggle-section">
+			<ul>
+			  <li><img src="cad.png" alt="cad" /> AutoCAD</li>
+			  <li><img src="sup.jpeg" alt="sup" /> SketchUp</li>
+			  <li><img src="d5.png" alt="d_5" /> D5</li> 
+			  <li><img src="es.png" alt="es" /> Enscape</li>
+			  <li><img src="ps.png" alt="ps" /> Photoshop</li>
+			</ul>
+		  </div>
+		  
+		  <button class="button-toggle" onclick="toggleSection('languages')">Languages</button>
+		  <div id="languages" class="toggle-section">
+			<ul>
+			  <li>English</li>
+			  <li>Hindi</li>
+			</ul>
+		  </div>
+		</section>
+
+		<section id="projects" class="container">
+		  <h2 class="section-title">Projects</h2>
+		  <!-- Projects Content -->
+		  <div class="project">
+			<h3>01: Residential Space – 3BHK</h3>
+			<div class="project-details">
+			  <p><img src="3bhk_0.png" alt="Blueprint 1" style="width:100%; margin-top:10px;"></p>
+			  <div style="margin: 20px 0; display: flex; gap: 20px;">
+	  <button onclick="toggleBlueprints(this)" style="padding: 10px 20px; background-color: #c9a97c; color: white; border: none; cursor: pointer; font-family: 'Montserrat', sans-serif;">Working drawing</button>
+	  <button onclick="toggle3D(this)" style="padding: 10px 20px; background-color: #c9a97c; color: white; border: none; cursor: pointer; font-family: 'Montserrat', sans-serif;">3D Views</button>
+	</div>
+	<div class="blueprints" style="display: none;">
+	  <p><strong>Master Plan</strong></p>
+	  <p><img src="3bhk_1.jpg" alt="Blueprint 1" style="width:100%; margin-top:10px;"></p>
+	  <p><strong>Furniture Layout</strong></p>
+	  <p><img src="3bhk_2.jpg" alt="Blueprint 2" style="width:100%; margin-top:10px;"></p>
+	  <p><strong>Guest Bedroom detailing</strong></p>
+	  <p><img src="3bhk_3.jpg" alt="Blueprint 1" style="width:100%; margin-top:10px;"></p>
+	  <p><strong>Kitchen detailing</strong></p>
+	  <p><img src="3bhk_4.jpg" alt="Blueprint 1" style="width:100%; margin-top:10px;"></p>
+	  <p><strong>Kids Bedroom detailing</strong></p>
+	  <p><img src="3bhk_5.jpg" alt="Blueprint 1" style="width:100%; margin-top:10px;"></p>
+	  <p><strong>RCP Lighting</strong></p>
+	  <p><img src="3bhk_6.jpg" alt="Blueprint 1" style="width:100%; margin-top:10px;"></p>
+	  <p><strong>Wiring Layout</strong></p>
+	  <p><img src="3bhk_7.jpg" alt="Blueprint 1" style="width:100%; margin-top:10px;"></p>
+	</div>
+	<div class="views3d" style="display: none;">
+	  <p><img src="3bhk_3d0.jpg" alt="3D View 1" style="width:100%; margin-top:10px;"></p>
+	  <p><img src="3bhk_3d1.png" alt="3D View 1" style="width:100%; margin-top:10px;"></p>
+	  <p><img src="3bhk_3d2.png" alt="3D View 1" style="width:100%; margin-top:10px;"></p>
+	  <p><img src="3bhk_3d3.png" alt="3D View 1" style="width:100%; margin-top:10px;"></p>
+	  <p><img src="3bhk_3d4.png" alt="3D View 1" style="width:100%; margin-top:10px;"></p>
+	  <p><img src="3bhk_3d5.png" alt="3D View 1" style="width:100%; margin-top:10px;"></p>
+	  <p><img src="3bhk_3d6.png" alt="3D View 1" style="width:100%; margin-top:10px;"></p>
+	  <p><img src="3bhk_3d7.png" alt="3D View 1" style="width:100%; margin-top:10px;"></p>
+	  <p><img src="3bhk_3d8.png" alt="3D View 1" style="width:100%; margin-top:10px;"></p>
+	</div>
+			</div>
+		  </div>
+
+		 <div class="project">
+			<h3>02: Rooftop Café and Restaurant</h3>
+			<div class="project-details">
+			 <p><img src="rc_0.png" alt="Blueprint 1" style="width:100%; margin-top:10px;"></p>
+			  <div style="margin: 20px 0; display: flex; gap: 20px;">
+	  <button onclick="toggleBlueprints(this)" style="padding: 10px 20px; background-color: #c9a97c; color: white; border: none; cursor: pointer; font-family: 'Montserrat', sans-serif;">Working drawing</button>
+	  <button onclick="toggle3D(this)" style="padding: 10px 20px; background-color: #c9a97c; color: white; border: none; cursor: pointer; font-family: 'Montserrat', sans-serif;">3D Views</button>
+	</div>
+	<div class="blueprints" style="display: none;">
+	  <p><strong>Furniture Layout</strong></p>
+	  <p><img src="rc_1.jpg" alt="Blueprint 1" style="width:100%; margin-top:10px;"></p>
+	  <p><strong>Section Dimension</strong></p>
+	  <p><img src="rc_2.jpg" alt="Blueprint 1" style="width:100%; margin-top:10px;"></p>
+	  <p><strong>Section Detailing</strong></p>
+	  <p><img src="rc_3.jpg" alt="Blueprint 1" style="width:100%; margin-top:10px;"></p>
+	  <p><strong>RCP Lighting</strong></p>
+	  <p><img src="rc_4.jpg" alt="Blueprint 1" style="width:100%; margin-top:10px;"></p>
+	  <p><strong>Wiring Layout</strong></p>
+	  <p><img src="rc_5.jpg" alt="Blueprint 1" style="width:100%; margin-top:10px;"></p>
+	</div>
+	<div class="views3d" style="display: none;">
+	  <p><img src="rc_6.jpg" alt="3D View 1" style="width:100%; margin-top:10px;"></p>
+	  <p><img src="rc_7.png" alt="3D View 2" style="width:100%; margin-top:10px;"></p>
+	  <p><img src="rc_8.png" alt="3D View 2" style="width:100%; margin-top:10px;"></p>
+	  <p><img src="rc_9.png" alt="3D View 2" style="width:100%; margin-top:10px;"></p>
+	  <p><img src="rc_10.png" alt="3D View 2" style="width:100%; margin-top:10px;"></p>
+	  <p><img src="rc_11.png" alt="3D View 2" style="width:100%; margin-top:10px;"></p>
+	  <p><img src="rc_12.png" alt="3D View 2" style="width:100%; margin-top:10px;"></p>
+	  <p><img src="rc_13.png" alt="3D View 2" style="width:100%; margin-top:10px;"></p>
+	  <p><img src="rc_14.png" alt="3D View 2" style="width:100%; margin-top:10px;"></p>
+	</div>
+			</div>
+		  </div>
+
+		  <div class="project">
+			<h3>03: Vacation Home</h3>
+			<div class="project-details">
+			  <p><img src="vh_0.png" alt="Blueprint 1" style="width:100%; margin-top:10px;"></p>
+			  <div style="margin: 20px 0; display: flex; gap: 20px;">
+	  <button onclick="toggleBlueprints(this)" style="padding: 10px 20px; background-color: #c9a97c; color: white; border: none; cursor: pointer; font-family: 'Montserrat', sans-serif;">Working drawing</button>
+	  <button onclick="toggle3D(this)" style="padding: 10px 20px; background-color: #c9a97c; color: white; border: none; cursor: pointer; font-family: 'Montserrat', sans-serif;">3D Views</button>
+	</div>
+	<div class="blueprints" style="display: none;">
+	  <p><strong>Furniture Layout - Ground floor</strong></p>
+	  <p><img src="vh_1.jpg" alt="Blueprint 1" style="width:100%; margin-top:10px;"></p>
+	  <p><strong>Furniture Layout - 1st floor</strong></p>
+	  <p><img src="vh_2.jpg" alt="Blueprint 1" style="width:100%; margin-top:10px;"></p>
+	  <p><strong>Furniture Layout - 2nd floor</strong></p>
+	  <p><img src="vh_3.jpg" alt="Blueprint 1" style="width:100%; margin-top:10px;"></p>
+	  <p><strong>Section Detailing</strong></p>
+	  <p><img src="vh_4.jpg" alt="Blueprint 1" style="width:100%; margin-top:10px;"></p>
+	  <p><strong>Bathroom Detailing</strong></p>
+	  <p><img src="vh_5.jpg" alt="Blueprint 1" style="width:100%; margin-top:10px;"></p>
+	  <p><strong>Lighting RCP & Wiring Layout</strong></p>
+	  <p><img src="vhl_1.jpg" alt="Blueprint 1" style="width:100%; margin-top:10px;"></p>
+	  <p><img src="vhl_2.jpg" alt="Blueprint 1" style="width:100%; margin-top:10px;"></p>
+	  <p><img src="vhl_3.jpg" alt="Blueprint 1" style="width:100%; margin-top:10px;"></p>
+	  <p><img src="vhl_4.jpg" alt="Blueprint 1" style="width:100%; margin-top:10px;"></p>
+	  <p><img src="vhl_5.jpg" alt="Blueprint 1" style="width:100%; margin-top:10px;"></p>
+	  <p><img src="vhl_6.jpg" alt="Blueprint 1" style="width:100%; margin-top:10px;"></p>
+	  <p><strong>Plumbing Layout</strong></p>
+	  <p><img src="vhp_1.jpg" alt="Blueprint 1" style="width:100%; margin-top:10px;"></p>
+	  <p><img src="vhp_2.jpg" alt="Blueprint 1" style="width:100%; margin-top:10px;"></p>
+	  <p><img src="vhp_3.jpg" alt="Blueprint 1" style="width:100%; margin-top:10px;"></p>
+	  <p><img src="vhp_4.jpg" alt="Blueprint 1" style="width:100%; margin-top:10px;"></p>
+	  <p><img src="vhp_5.jpg" alt="Blueprint 1" style="width:100%; margin-top:10px;"></p>
+	  <p><img src="vhp_6.jpg" alt="Blueprint 1" style="width:100%; margin-top:10px;"></p>
+	  
+	</div>
+	<div class="views3d" style="display: none;">
+	  <p><img src="vh3d_1.jpg" alt="3D View 1" style="width:100%; margin-top:10px;"></p>
+	  <p><img src="vh3d_2.jpg" alt="3D View 1" style="width:100%; margin-top:10px;"></p>
+	  <p><img src="vh3d_3.jpg" alt="3D View 1" style="width:100%; margin-top:10px;"></p>
+	  <p><img src="vh3d_4.jpg" alt="3D View 1" style="width:100%; margin-top:10px;"></p>
+	  <p><img src="vh3d_5.jpg" alt="3D View 1" style="width:100%; margin-top:10px;"></p>
+	  <p><img src="vh3d_6.jpg" alt="3D View 1" style="width:100%; margin-top:10px;"></p>
+	  <p><img src="vh3d_7.jpg" alt="3D View 1" style="width:100%; margin-top:10px;"></p>
+	  <p><img src="vh3d_8.jpg" alt="3D View 1" style="width:100%; margin-top:10px;"></p>
+	  <p><img src="vh3d_9.jpg" alt="3D View 1" style="width:100%; margin-top:10px;"></p>
+	  <p><img src="vh3d_10.jpg" alt="3D View 1" style="width:100%; margin-top:10px;"></p>
+	  <p><img src="vh3d_11.jpg" alt="3D View 1" style="width:100%; margin-top:10px;"></p>
+	  <p><img src="vh3d_12.jpg" alt="3D View 1" style="width:100%; margin-top:10px;"></p>
+	</div>
+			</div>
+		  </div>
+		 </section>
+
+		<section id="contact" class="container">
+		  <h2 class="section-title">Contact</h2>
+		  <p><strong>Phone:</strong> +91 8867663249<br>
+		  <strong>Email:</strong> dharmendersingh132005@gmail.com</p>
+		</section>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Dharmender Singh. All rights reserved.</p>
+  </footer>
+
+<script>
+  function toggleSection(id) {
+    const section = document.getElementById(id);
+    section.style.display = section.style.display === 'block' ? 'none' : 'block';
+  }
+</script>
+<script>
+  // Project card title click toggles open/close:
+  document.querySelectorAll('.project').forEach(project => {
+    project.addEventListener('click', e => {
+      // ignore clicks inside the details or on buttons
+      if (!e.target.closest('.project-details') && e.target.tagName !== 'BUTTON') {
+        project.classList.toggle('active');
+      }
+    });
+  });
+
+  // Toggle blueprint images
+  function toggleBlueprints(btn) {
+    const section = btn.closest('.project-details');
+    const blue = section.querySelector('.blueprints');
+    blue.style.display = blue.style.display === 'block' ? 'none' : 'block';
+  }
+  // Toggle 3D view images
+  function toggle3D(btn) {
+    const section = btn.closest('.project-details');
+    const views = section.querySelector('.views3d');
+    views.style.display = views.style.display === 'block' ? 'none' : 'block';
+  }
+
+  // Your About‑section toggles stay as is:
+  function toggleSection(id) {
+    const el = document.getElementById(id);
+    el.style.display = el.style.display === 'block' ? 'none' : 'block';
+  }
+</script>
+
+</body>
+</html>
